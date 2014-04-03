@@ -30,7 +30,7 @@ class FlatFile {
 	}
 
 	public function writeComment($name, $comment) {
-		file_put_contents($this->filename, sprintf("%s\t%s\n", $name, $comment), FILE_APPEND);
+		file_put_contents($this->filename, sprintf("%s\t%s\n", $name, htmlspecialchars($comment)), FILE_APPEND);
 	}
 } 
 
